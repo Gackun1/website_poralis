@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>Polaris</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="header__logo">
+        <h1><img src="/assets/images/logo.png" alt="" /></h1>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item"><a href="/about">ABOUT</a></li>
+          <li class="header__list-item"><a href="#">WORKS</a></li>
+          <li class="header__list-item"><a href="#">TOPICS</a></li>
+          <li class="header__list-item"><a href="#">PRODUCTS</a></li>
+          <li class="header__list-item"><a href="#">CAREERS</a></li>
+          <li class="header__list-item"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-visual">
+        <p class="main-visual__title">
+          お客様の思いを<br />
+          <span class="main-visual__title-lg">輝く形</span>
+          に導きます
+        </p>
+        <div class="swiper main-visual__slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/img03.jpg" alt="" /></div>
+            <div class="swiper-slide"><img src="/assets/images/img04.jpg" alt="" /></div>
+            <div class="swiper-slide"><img src="/assets/images/img05.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="sns-icon">
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_facebook.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_instagram.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_youtube.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_twitter.png" alt="" /></a>
+        </li>
+      </ul>
+    </footer>
+    <link rel="stylesheet" href="/assets/lib/swiper-bundle.min.css" />
+    <script src="/assets/lib/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const swiperTop = new Swiper(".swiper", {
+          speed: 2000,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          effect: "fade",
+          allowTouchMove: false,
+        });
+      });
+    </script>
+  </body>
+</html>
