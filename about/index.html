@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>Polaris|About</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../" class="header__logo">
+        <h1><img src="/assets/images/logo.png" alt="" /></h1>
+      </a>
+      <nav class="header__nav pc-display">
+        <ul class="header__list">
+          <li class="header__list-item"><a href="./">ABOUT</a></li>
+          <li class="header__list-item"><a href="#">WORKS</a></li>
+          <li class="header__list-item"><a href="#">TOPICS</a></li>
+          <li class="header__list-item"><a href="#">PRODUCTS</a></li>
+          <li class="header__list-item"><a href="#">CAREERS</a></li>
+          <li class="header__list-item"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-button sp-display"><span></span><span></span><span></span></div>
+    </header>
+    <div class="hamburger-nav">
+      <ul class="hamburger-nav__list">
+        <li class="hamburger-nav__list-item"><a href="./about/">ABOUT</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">WORKS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">TOPICS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">PRODUCTS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">CAREERS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    <main>
+      <div class="main-visual">
+        <div class="main-visual__text-box">
+          <p class="main-visual__sub-title">ABOUT</p>
+          <p class="main-visual__title-2">アイデアを「星」のように輝かせます。</p>
+          <p>お客様が表現されたいコンセプトやイメージを理解した上で、それを世の中に一番輝く形で表現するお手伝いをいたします。</p>
+        </div>
+        <div class="main-visual__scroll">
+          <a href="#" class="scroll-down">
+            <span class="scroll-down__text">SCROLL</span>
+            <span class="scroll-down__arrow"></span>
+          </a>
+        </div>
+        <div class="swiper-mv main-visual__slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/about03.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="top-section top-section--under-page">
+        <div class="top-section__content">
+          <div class="about-gallery">
+            <a href="#" class="about-gallery__item">
+              <img src="/assets/images/about01.png" alt="" />
+              <div class="about-gallery__text-box">
+                <p class="about-gallery__title">COLOR STORY</p>
+                <p>撮った写真を線画処理して塗り絵を楽しむアプリ</p>
+              </div>
+            </a>
+            <a href="#" class="about-gallery__item">
+              <img src="/assets/images/about02.png" alt="" />
+              <div class="about-gallery__text-box">
+                <p class="about-gallery__title">THE BEST</p>
+                <p>あなたのベストチョイスを皆にシェアして注目を集めるアプリ</p>
+              </div>
+            </a>
+            <a href="#" class="about-gallery__item">
+              <img src="/assets/images/about04.png" alt="" />
+              <div class="about-gallery__text-box">
+                <p class="about-gallery__title">Cafe De Paris</p>
+                <p>喫茶店サイト</p>
+              </div>
+            </a>
+            <a href="#" class="about-gallery__item">
+              <img src="/assets/images/about05.png" alt="" />
+              <div class="about-gallery__text-box">
+                <p class="about-gallery__title">MUSICIAN RECORD</p>
+                <p>音楽を好きな新人ミュージシャンがライブと音楽を販売できるサービス</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="top-section__nav">
+          <ul class="content-nav">
+            <li class="content-nav__item"><a href="#">Web/App</a></li>
+            <li class="content-nav__item"><a href="#">Graphics</a></li>
+            <li class="content-nav__item"><a href="#">Package</a></li>
+            <li class="content-nav__item"><a href="#">VI/Experience</a></li>
+            <li class="content-nav__item"><a href="#">Book Design</a></li>
+            <li class="content-nav__item"><a href="#">Products</a></li>
+          </ul>
+          <a href="#" class="button-more">MORE</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="sns-icon">
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_facebook.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_instagram.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_youtube.png" alt="" /></a>
+        </li>
+        <li class="scs-icon__item">
+          <a href="#"><img src="/assets/images/i_twitter.png" alt="" /></a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerButton = document.querySelector(".hamburger-button");
+        const hamburgerNav = document.querySelector(".hamburger-nav");
+        hamburgerButton.addEventListener("click", () => {
+          hamburgerButton.classList.toggle("active");
+          hamburgerNav.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

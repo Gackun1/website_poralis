@@ -9,12 +9,12 @@
   </head>
   <body>
     <header class="header">
-      <a href="/" class="header__logo">
+      <a href="./" class="header__logo">
         <h1><img src="/assets/images/logo.png" alt="" /></h1>
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav pc-display">
         <ul class="header__list">
-          <li class="header__list-item"><a href="/about">ABOUT</a></li>
+          <li class="header__list-item"><a href="./about/">ABOUT</a></li>
           <li class="header__list-item"><a href="#">WORKS</a></li>
           <li class="header__list-item"><a href="#">TOPICS</a></li>
           <li class="header__list-item"><a href="#">PRODUCTS</a></li>
@@ -22,7 +22,18 @@
           <li class="header__list-item"><a href="#">CONTACT</a></li>
         </ul>
       </nav>
+      <div class="hamburger-button sp-display"><span></span><span></span><span></span></div>
     </header>
+    <div class="hamburger-nav">
+      <ul class="hamburger-nav__list">
+        <li class="hamburger-nav__list-item"><a href="./about/">ABOUT</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">WORKS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">TOPICS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">PRODUCTS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">CAREERS</a></li>
+        <li class="hamburger-nav__list-item"><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
     <main>
       <div class="main-visual">
         <p class="main-visual__title">
@@ -36,7 +47,7 @@
             <span class="scroll-down__arrow"></span>
           </a>
         </div>
-        <div class="swiper main-visual__slide">
+        <div class="swiper-mv main-visual__slide">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="/assets/images/img03.jpg" alt="" /></div>
             <div class="swiper-slide"><img src="/assets/images/img04.jpg" alt="" /></div>
@@ -134,6 +145,89 @@
       </section>
       <section class="section">
         <h2 class="primary-title">POLARIS PEOPLE</h2>
+        <div class="swiper-people">
+          <div class="swiper-wrapper people-list">
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people02.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">私たちのデザインを世界に届けたいです</h3>
+                </div>
+              </a>
+            </article>
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people01.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">自分の感覚で作る</h3>
+                </div>
+              </a>
+            </article>
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people03.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">良き発見者になる</h3>
+                </div>
+              </a>
+            </article>
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people02.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">私たちのデザインを世界に届けたいです</h3>
+                </div>
+              </a>
+            </article>
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people01.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">自分の感覚で作る</h3>
+                </div>
+              </a>
+            </article>
+            <article class="swiper-slide people-list__item">
+              <a href="people-card">
+                <div class="people-card__image">
+                  <img src="/assets/images/people03.png" alt="" />
+                </div>
+                <div class="people-card__text">
+                  <h3 class="people-card__title">良き発見者になる</h3>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="primary-title">CONTACT</h2>
+        <form action="./" class="contact-form">
+          <div class="contact-form__row">
+            <p class="contact-form__heading">お問い合わせの種類</p>
+            <input id="works" type="radio" name="inquiry_type" value="works" checked />
+            <label for="works">制作のご依頼</label>
+            <input id="consultation" type="radio" name="inquiry_type" value="consultation" />
+            <label for="consultation">お見積もり・ご相談</label>
+            <input id="other" type="radio" name="inquiry_type" value="other" />
+            <label for="other">その他</label>
+          </div>
+          <div class="contact-form__row"><label for="name" class="contact-form__heading">お名前</label><input id="name" type="text" name="name" /></div>
+          <div class="contact-form__row"><label for="content" class="contact-form__heading">お問い合わせ内容</label><textarea id="content" name="content"></textarea></div>
+          <input type="submit" value="送信する" class="button-primary mx-auto" />
+        </form>
       </section>
     </main>
     <footer class="footer">
@@ -156,7 +250,7 @@
     <script src="/assets/lib/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const swiperTop = new Swiper(".swiper", {
+        const swiperMv = new Swiper(".swiper-mv", {
           speed: 2000,
           loop: true,
           autoplay: {
@@ -164,6 +258,27 @@
           },
           effect: "fade",
           allowTouchMove: false,
+        });
+        const swiperPeople = new Swiper(".swiper-people", {
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 3,
+            },
+          },
+        });
+        const hamburgerButton = document.querySelector(".hamburger-button");
+        const hamburgerNav = document.querySelector(".hamburger-nav");
+        hamburgerButton.addEventListener("click", () => {
+          hamburgerButton.classList.toggle("active");
+          hamburgerNav.classList.toggle("active");
         });
       });
     </script>
