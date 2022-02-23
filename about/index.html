@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <title>Polaris|About</title>
   </head>
   <body>
     <header class="header">
-      <a href="../" class="header__logo">
-        <h1><img src="/assets/images/logo.png" alt="" /></h1>
+      <a href="../index.html" class="header__logo">
+        <h1><img src="../assets/images/logo.png" alt="" /></h1>
       </a>
       <nav class="header__nav pc-display">
         <ul class="header__list">
-          <li class="header__list-item"><a href="./">ABOUT</a></li>
+          <li class="header__list-item"><a href="#">ABOUT</a></li>
           <li class="header__list-item"><a href="#">WORKS</a></li>
           <li class="header__list-item"><a href="#">TOPICS</a></li>
           <li class="header__list-item"><a href="#">PRODUCTS</a></li>
@@ -49,7 +49,7 @@
         </div>
         <div class="swiper-mv main-visual__slide">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/assets/images/about03.png" alt="" /></div>
+            <div class="swiper-slide"><img src="../assets/images/about03.png" alt="" /></div>
           </div>
         </div>
       </div>
@@ -57,28 +57,28 @@
         <div class="top-section__content">
           <div class="about-gallery">
             <a href="#" class="about-gallery__item">
-              <img src="/assets/images/about01.png" alt="" />
+              <img src="../assets/images/about01.png" alt="" />
               <div class="about-gallery__text-box">
                 <p class="about-gallery__title">COLOR STORY</p>
                 <p>撮った写真を線画処理して塗り絵を楽しむアプリ</p>
               </div>
             </a>
             <a href="#" class="about-gallery__item">
-              <img src="/assets/images/about02.png" alt="" />
+              <img src="../assets/images/about02.png" alt="" />
               <div class="about-gallery__text-box">
                 <p class="about-gallery__title">THE BEST</p>
                 <p>あなたのベストチョイスを皆にシェアして注目を集めるアプリ</p>
               </div>
             </a>
             <a href="#" class="about-gallery__item">
-              <img src="/assets/images/about04.png" alt="" />
+              <img src="../assets/images/about04.png" alt="" />
               <div class="about-gallery__text-box">
                 <p class="about-gallery__title">Cafe De Paris</p>
                 <p>喫茶店サイト</p>
               </div>
             </a>
             <a href="#" class="about-gallery__item">
-              <img src="/assets/images/about05.png" alt="" />
+              <img src="../assets/images/about05.png" alt="" />
               <div class="about-gallery__text-box">
                 <p class="about-gallery__title">MUSICIAN RECORD</p>
                 <p>音楽を好きな新人ミュージシャンがライブと音楽を販売できるサービス</p>
@@ -102,21 +102,32 @@
     <footer class="footer">
       <ul class="sns-icon">
         <li class="scs-icon__item">
-          <a href="#"><img src="/assets/images/i_facebook.png" alt="" /></a>
+          <a href="#"><img src="../assets/images/i_facebook.png" alt="" /></a>
         </li>
         <li class="scs-icon__item">
-          <a href="#"><img src="/assets/images/i_instagram.png" alt="" /></a>
+          <a href="#"><img src="../assets/images/i_instagram.png" alt="" /></a>
         </li>
         <li class="scs-icon__item">
-          <a href="#"><img src="/assets/images/i_youtube.png" alt="" /></a>
+          <a href="#"><img src="../assets/images/i_youtube.png" alt="" /></a>
         </li>
         <li class="scs-icon__item">
-          <a href="#"><img src="/assets/images/i_twitter.png" alt="" /></a>
+          <a href="#"><img src="../assets/images/i_twitter.png" alt="" /></a>
         </li>
       </ul>
     </footer>
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css" />
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const swiperMv = new Swiper(".swiper-mv", {
+          speed: 2000,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          effect: "fade",
+          allowTouchMove: false,
+        });
         const hamburgerButton = document.querySelector(".hamburger-button");
         const hamburgerNav = document.querySelector(".hamburger-nav");
         hamburgerButton.addEventListener("click", () => {
